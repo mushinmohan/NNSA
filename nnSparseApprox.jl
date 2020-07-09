@@ -130,7 +130,7 @@ function sparseApprox(A, b, k, opts...)
         end
         
         for j = 1 : numtar
-            if cmblist[i] != j && !can_use_phase2[i][j] && !isprohib_v3([cmblist[i] j], prohib, 2, prohib_counter[2]) &&
+            if cmblist[i] != j && !can_use_phase2[i][j] && !isprohib_v4([cmblist[i] j], prohib, 2, prohib_counter[2]) &&
                 (max_expl[j] + max_expl[cmblist[i]]) >= info_bound
 
                 S[:, 1] .= A[:, cmblist[i]]
